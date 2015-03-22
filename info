@@ -1,0 +1,22 @@
+import turtle
+class infobar(turtle)
+	def_init_(self,canvas,x,y,maxhealth,maxmana)
+	rawTurtle.init_(self,canvas)
+	self.penup()
+	self.pendown()
+	self.goto(x,y)
+	self.shape("infobar")
+def draw_box:()
+
+	turtle.goto(0,500)
+	turtle.goto(250,500)
+	turtle.goto(250,0)
+	turtle.penup()
+	turtle.goto(250,500)
+	turtle.pendown()
+	turtle.goto(500,500)
+	turtle.goto(500,0)
+	turtle.goto(0,0)
+	turtle.goto(0,500)
+	turtle.penup()
+	turtle.goto

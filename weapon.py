@@ -1,14 +1,16 @@
 import turtle
 
 class weapon(Turtle):
-	def _init_(self,canvas,x,y,dz,dy,shape,damage,mana_cost):
+	def __init__(self,canvas,x,y,dz,dy,shape,damage,mana_cost,mana_use):
 		RawTurtle.__init__(self,canvas)
 		self.penup()
+		self.status_bool = False
 		self.goto(x,y)
 	`	self.damage=damage
 		self.mana_cost=mana_cost
 		self.dx = dx
         self.dy = dy
+        self.mana_use = mana_use
 		self.shape("weapon")
 
 	#def checkifenemyisinrange(self,enemy):
@@ -20,9 +22,9 @@ class weapon(Turtle):
 			#return False 
 
 		
-	def mana_use(self):
+	def get_mana_use(self):
 
-		mana_power-self.mana_cost
+		return self.mana_use
 		
 	def shoot(self,distance):
 		x= self.xcor()
@@ -31,12 +33,17 @@ class weapon(Turtle):
 		self.goto(x+distance,y)
 
 
-	def weapon.show(self):
-		turtle.showturtle()
+	def show(self):
+		self.showturtle()
+		self.status_bool = True
+
+	def status(self):
+		return self.status_bool
 
 
-	def weapon.hide(self):
-		turtle.hideturtle()
+	def hide(self):
+		self.hideturtle()
+		self.status_bool=False
 
 
 
