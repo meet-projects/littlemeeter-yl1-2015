@@ -13,24 +13,18 @@ class weapon(Turtle):
         self.mana_use = mana_use
 		self.shape("weapon")
 
-	#def checkifenemyisinrange(self,enemy):
-		#x= self.xcor()
-		#y=self.ycor()
-		#if((self.ycor()=enemy.ycor()) and (enemy.xcor()-self.xcor()<0)):
-					#return True
-		#else:
-			#return False 
+	def enemyisinrange(self,enemy):
+	x= self.xcor()
+	y=self.ycor()
 
+	if(self.ycor()=enemy.ycor() and (enemy.xcor()-self.xcor():
+		return True
+	
 		
 	def get_mana_use(self):
 
 		return self.mana_use
 		
-	def shoot(self,distance):
-		x= self.xcor()
-		y=self.ycor()
-                                
-		self.goto(x+distance,y)
 
 
 	def show(self):
@@ -46,6 +40,21 @@ class weapon(Turtle):
 		self.status_bool=False
 
 
+	def shoot(self):
+		if mana_status==True
+			for x in range(0,800,1):
+				x= self.xcor()
+				y=self.ycor()
+				self.goto (x,y)
+		else:
+			print("not enof mama")	
+	
+
+	def return_weapon (self,player):
+		if enemyisinrange== True:
+			hide() 
+			self.goto(player.xcor(),player.ycor())
+#make sure
 
 	
 
