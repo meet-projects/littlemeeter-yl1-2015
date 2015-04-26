@@ -1,6 +1,8 @@
 from __future__ import division
 import turtle
 import time
+from tkinter import *
+
 
 x=-300
 y=-300
@@ -19,10 +21,7 @@ def fillbg(x,y):
     turtle.goto(x+800,y)
     turtle.goto(x,y)
     turtle.pu()
-    turtle.goto(x+400,y+200)
-    turtle.pd()
-    turtle.goto(x+400,y)
-    turtle.pd()
+   
     turtle.end_fill()
 fillbg(x,y)
 
@@ -30,16 +29,29 @@ fillbg(x,y)
 max_health=100
 max_mana=100
 lines_length=200
-a=60.0
-# its an assumption till we have a variable that gives us the current health.
-def love():
-    b=a/max_health
+a=0
+# its an assumption till we have a variable that gives us the current health.(a)
+def cal_lengh_of_h_line():
+    b=a/max_health # a here is a variable that  it value always changes 
     print(b)
     c=b*lines_length
     print(c)
     return c
-l=love()
+l=cal_lengh_of_h_line()
 print(l)
+def dead_st():
+    root = Tk()
+    w = Label(root, text="you lost!")
+    w.pack()
+
+    root.mainloop()
+  
+
+def dead():
+    if l== 0:
+        dead_st()
+        print ("dead")
+        
 #done for the health.
 def mana ():
     m=0
@@ -72,14 +84,14 @@ while run == 1:
 
     
   
-def kill():                                      #variable for the mana.
+def cal_length_of_mana_line():                                      #variable for the mana.
     m2= m/max_mana
     print(m2)
     m3 =m2*lines_length
     print(m3)
     return m3
 
-s=kill()
+s=cal_length_of_mana_line()
 print(s)
 
 # done for the mana.
@@ -99,12 +111,9 @@ fun = 1
 
 while fun == 1:
     draw_health()
-    if fun >1:
-        print("shit is happening")
-    else:
-        print("its ok")
-        break
-
+    print("its ok")
+   
+    
 
 def clear_every_5_sec():
     health.clear()
